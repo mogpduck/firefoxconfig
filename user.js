@@ -60,6 +60,7 @@ user_pref("layout.css.grid-template-masonry-value.enabled", true);
 /****************************************************************************
  * SECTION: SECUREFOX                                                       *
 ****************************************************************************/
+
 /** TRACKING PROTECTION ***/
 user_pref("browser.contentblocking.category", "strict");
 user_pref("browser.download.start_downloads_in_tmp_dir", true);
@@ -79,6 +80,7 @@ user_pref("security.tls.enable_0rtt_data", false);
 /** DISK AVOIDANCE ***/
 user_pref("browser.privatebrowsing.forceMediaMemoryCache", true);
 user_pref("browser.sessionstore.interval", 60000);
+user_pref("browser.sessionhistory.max_total_viewers", 4);
 
 /** SHUTDOWN & SANITIZING ***/
 user_pref("browser.privatebrowsing.resetPBM.enabled", true);
@@ -94,6 +96,7 @@ user_pref("browser.urlbar.quicksuggest.enabled", false);
 user_pref("browser.urlbar.groupLabels.enabled", false);
 user_pref("browser.formfill.enable", false);
 user_pref("network.IDN_show_punycode", true);
+user_pref("browser.places.speculativeConnect.enabled", false);
 
 /** PASSWORDS ***/
 user_pref("signon.formlessCapture.enabled", false);
@@ -122,6 +125,7 @@ user_pref("permissions.default.desktop-notification", 2);
 user_pref("permissions.default.geo", 2);
 user_pref("browser.search.update", false);
 user_pref("permissions.manager.defaultsUrl", "");
+user_pref("extensions.getAddons.cache.enabled", false);
 
 /** TELEMETRY ***/
 user_pref("datareporting.policy.dataSubmissionEnabled", false);
@@ -281,3 +285,4 @@ user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this
 /****************************************************************************
  * END: BETTERFOX                                                           *
 ****************************************************************************/
+
