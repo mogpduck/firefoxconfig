@@ -10,7 +10,7 @@
 /****************************************************************************
  * Betterfox                                                                *
  * "Ad meliora"                                                             *
- * version: 144                                                          *
+ * version: 146                                                        *
  * url: https://github.com/yokoffing/Betterfox                              *
 ****************************************************************************/
 
@@ -21,6 +21,7 @@
 user_pref("gfx.content.skia-font-cache-size", 32);
 
 /** GFX ***/
+user_pref("gfx.webrender.layer-compositor", true);
 user_pref("gfx.canvas.accelerated.cache-items", 32768);
 user_pref("gfx.canvas.accelerated.cache-size", 4096);
 user_pref("webgl.max-size", 16384);
@@ -61,18 +62,13 @@ user_pref("network.dns.disablePrefetchFromHTTPS", true);
 user_pref("browser.urlbar.speculativeConnect.enabled", false);
 user_pref("browser.places.speculativeConnect.enabled", false);
 user_pref("network.prefetch-next", false);
-user_pref("network.predictor.enabled", false);
 
 /****************************************************************************
  * SECTION: SECUREFOX                                                       *
 ****************************************************************************/
 
 /** TRACKING PROTECTION ***/
-user_pref("browser.contentblocking.category", "strict");
-user_pref("privacy.trackingprotection.allow_list.baseline.enabled", true);
-user_pref("privacy.trackingprotection.allow_list.convenience.enabled", true);
 user_pref("browser.download.start_downloads_in_tmp_dir", true);
-user_pref("browser.helperApps.deleteTempFileOnExit", true);
 user_pref("browser.uitour.enabled", false);
 user_pref("privacy.globalprivacycontrol.enabled", true);
 
@@ -103,15 +99,15 @@ user_pref("browser.urlbar.groupLabels.enabled", false);
 user_pref("browser.formfill.enable", false);
 user_pref("network.IDN_show_punycode", true);
 
+/** HTTPS-ONLY MODE ***/
+user_pref("dom.security.https_only_mode", true);
+user_pref("dom.security.https_only_mode_error_page_user_suggestions", true);
+
 /** PASSWORDS ***/
 user_pref("signon.formlessCapture.enabled", false);
 user_pref("signon.privateBrowsingCapture.enabled", false);
 user_pref("network.auth.subresource-http-auth-allow", 1);
 user_pref("editor.truncate_user_pastes", false);
-
-/** MIXED CONTENT + CROSS-SITE ***/
-user_pref("security.mixed_content.block_display_content", true);
-user_pref("pdfjs.enableScripting", false);
 
 /** EXTENSIONS ***/
 user_pref("extensions.enabledScopes", 5);
@@ -128,6 +124,7 @@ user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 /** MOZILLA ***/
 user_pref("permissions.default.desktop-notification", 2);
 user_pref("permissions.default.geo", 2);
+user_pref("geo.provider.network.url", "https://beacondb.net/v1/geolocate");
 user_pref("browser.search.update", false);
 user_pref("permissions.manager.defaultsUrl", "");
 user_pref("extensions.getAddons.cache.enabled", false);
@@ -164,7 +161,6 @@ user_pref("browser.tabs.crashReporting.sendReport", false);
  * SECTION: PESKYFOX                                                        *
 ****************************************************************************/
 /** MOZILLA UI ***/
-user_pref("browser.privatebrowsing.vpnpromourl", "");
 user_pref("extensions.getAddons.showPane", false);
 user_pref("extensions.htmlaboutaddons.recommendations.enabled", false);
 user_pref("browser.discovery.enabled", false);
@@ -173,6 +169,7 @@ user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.addons", fa
 user_pref("browser.newtabpage.activity-stream.asrouter.userprefs.cfr.features", false);
 user_pref("browser.preferences.moreFromMozilla", false);
 user_pref("browser.aboutConfig.showWarning", false);
+user_pref("browser.startup.homepage_override.mstone", "ignore");
 user_pref("browser.aboutwelcome.enabled", false);
 user_pref("browser.profiles.enabled", true);
 
@@ -180,6 +177,13 @@ user_pref("browser.profiles.enabled", true);
 user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
 user_pref("browser.compactmode.show", true);
 user_pref("browser.privateWindowSeparation.enabled", false); // WINDOWS
+
+/** AI ***/
+user_pref("browser.ml.enable", false);
+user_pref("browser.ml.chat.enabled", false);
+user_pref("browser.ml.chat.menu", false);
+user_pref("browser.tabs.groups.smart.enabled", false);
+user_pref("browser.ml.linkPreview.enabled", false);
 
 /** FULLSCREEN NOTICE ***/
 user_pref("full-screen-api.transition-duration.enter", "0 0");
@@ -190,11 +194,11 @@ user_pref("full-screen-api.warning.timeout", 0);
 user_pref("browser.urlbar.trending.featureGate", false);
 
 /** NEW TAB PAGE ***/
-user_pref("browser.newtabpage.activity-stream.feeds.topsites", false);
+user_pref("browser.newtabpage.activity-stream.default.sites", "");
+user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 user_pref("browser.newtabpage.activity-stream.feeds.section.topstories", false);
 user_pref("browser.newtabpage.activity-stream.showSponsored", false);
 user_pref("browser.newtabpage.activity-stream.showSponsoredCheckboxes", false);
-user_pref("browser.newtabpage.activity-stream.showSponsoredTopSites", false);
 
 /** DOWNLOADS ***/
 user_pref("browser.download.manager.addToRecentDocs", false);
