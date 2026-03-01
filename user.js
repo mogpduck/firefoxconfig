@@ -205,7 +205,7 @@ user_pref("gfx.font_rendering.cleartype_params.cleartype_level", 100);
 user_pref("gfx.font_rendering.directwrite.use_gdi_table_loading", false);
 user_pref("gfx.font_rendering.cleartype_params.force_gdi_classic_for_families", "");
 user_pref("gfx.font_rendering.cleartype_params.gamma", 1750);
-user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", 100);
+user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", 50);
 user_pref("gfx.font_rendering.cleartype_params.pixel_structure", 1);
 
 // PREF: allow embedded tweets and reddit posts [FF136+]
