@@ -10,7 +10,7 @@
 /****************************************************************************
  * Betterfox                                                                *
  * "Ad meliora"                                                             *
- * version: 148                                                       *
+ * version: 149                                                    *
  * url: https://github.com/yokoffing/Betterfox                              *
 ****************************************************************************/
 
@@ -18,16 +18,7 @@
  * SECTION: FASTFOX                                                         *
 ****************************************************************************/
 
-/** DISK CACHE ***/
-user_pref("browser.cache.disk.enable", false);
-
-/** SPECULATIVE LOADING ***/
-user_pref("network.http.speculative-parallel-limit", 0);
-user_pref("network.dns.disablePrefetch", true);
-user_pref("network.dns.disablePrefetchFromHTTPS", true);
-user_pref("browser.urlbar.speculativeConnect.enabled", false);
-user_pref("browser.places.speculativeConnect.enabled", false);
-user_pref("network.prefetch-next", false);
+user_pref("gfx.canvas.accelerated.cache-size", 256); // reset pref
 
 /****************************************************************************
  * SECTION: SECUREFOX                                                       *
