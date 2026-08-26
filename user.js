@@ -142,6 +142,7 @@ user_pref("datareporting.usage.uploadEnabled", false);
 user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("app.normandy.enabled", false);
 user_pref("app.normandy.api_url", "");
+user_pref("nimbus.rollouts.enabled", false);
 
 /** CRASH REPORTS ***/
 user_pref("breakpad.reportURL", "");
@@ -214,8 +215,7 @@ user_pref("browser.contentblocking.category", "standard");
 // PREF: improve font rendering by using DirectWrite everywhere like Chrome [WINDOWS]
 user_pref("gfx.font_rendering.cleartype_params.rendering_mode", 5);
 user_pref("gfx.font_rendering.cleartype_params.cleartype_level", 100);
-user_pref("gfx.font_rendering.directwrite.use_gdi_table_loading", false);
-user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", 50);
+user_pref("gfx.font_rendering.cleartype_params.enhanced_contrast", 100);
 
 // PREF: allow embedded tweets and reddit posts [FF136+]
 user_pref("urlclassifier.trackingSkipURLs", "embed.reddit.com, *.twitter.com, *.twimg.com"); // MANUAL [FF136+]
