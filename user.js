@@ -20,6 +20,14 @@
 
 user_pref("gfx.canvas.accelerated.cache-size", 512); // reset pref
 user_pref("gfx.content.skia-font-cache-size", 20);
+user_pref("content.notify.interval", 100000);
+
+/** MEDIA CACHE ***/
+user_pref("media.cache_readahead_limit", 3600);
+user_pref("media.cache_resume_threshold", 1800);
+
+/** IMAGE CACHE ***/
+user_pref("image.mem.decode_bytes_at_a_time", 32768);
 
 /** NETWORKING ***/
 user_pref("network.buffer.cache.size", 65535);
@@ -29,20 +37,6 @@ user_pref("network.http.max-persistent-connections-per-server", 10);
 user_pref("network.http.max-urgent-start-excessive-connections-per-host", 5);
 user_pref("network.http.request.max-start-delay", 5);
 user_pref("network.dnsCacheExpiration", 3600);
-
-/** GENERAL ***/
-user_pref("gfx.content.skia-font-cache-size", 20);
-user_pref("content.notify.interval", 100000);
-
-/** JS ***/
-user_pref("javascript.options.baselinejit.threshold", 50);
-
-/** MEDIA CACHE ***/
-user_pref("media.cache_readahead_limit", 3600);
-user_pref("media.cache_resume_threshold", 1800);
-
-/** IMAGE CACHE ***/
-user_pref("image.mem.decode_bytes_at_a_time", 32768);
 
 /****************************************************************************
  * SECTION: SECUREFOX                                                       *
@@ -105,9 +99,6 @@ user_pref("extensions.enabledScopes", 5);
 /** HEADERS / REFERERS ***/
 user_pref("network.http.referer.XOriginTrimmingPolicy", 2);
 
-/** CONTAINERS ***/
-user_pref("privacy.userContext.ui.enabled", true);
-
 /** SAFE BROWSING ***/
 user_pref("browser.safebrowsing.downloads.remote.enabled", false);
 
@@ -147,6 +138,7 @@ user_pref("nimbus.rollouts.enabled", false);
 /** CRASH REPORTS ***/
 user_pref("breakpad.reportURL", "");
 user_pref("browser.tabs.crashReporting.sendReport", false);
+user_pref("browser.crashReports.unsubmittedCheck.enabled", false);
 
 /****************************************************************************
  * SECTION: PESKYFOX                                                        *
@@ -270,4 +262,3 @@ user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this
 /****************************************************************************
  * END: BETTERFOX                                                           *
 ****************************************************************************/
-
