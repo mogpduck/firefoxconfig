@@ -262,3 +262,15 @@ user_pref("mousewheel.default.delta_multiplier_y", 300); // 250-400; adjust this
 /****************************************************************************
  * END: BETTERFOX                                                           *
 ****************************************************************************/
+
+/* Default rules */
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true);
+user_pref("svg.context-properties.content.enabled", true);
+user_pref("browser.tabs.delayHidingAudioPlayingIconMS", 0);
+user_pref("browser.tabs.allow_transparent_browser", true);
+user_pref("sidebar.revamp.round-content-area", false);
+
+/*To active container tabs without any extension */
+user_pref("privacy.userContext.enabled", true);
+user_pref("privacy.userContext.ui.enabled", true);
+user_pref("privacy.userContext.longPressBehavior", 2);
